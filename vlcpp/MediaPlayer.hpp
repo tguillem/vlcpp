@@ -265,6 +265,11 @@ public:
         return libvlc_media_player_get_xwindow(*this);
     }
 
+    void setGLXContext(void *display, void *context, unsigned texture)
+    {
+        libvlc_video_set_glx_opengl_context(*this, display, context, texture);
+    }
+
     /**
      * Set a Win32/Win64 API window handle (HWND) where the media player
      * should render its video output. If LibVLC was built without
